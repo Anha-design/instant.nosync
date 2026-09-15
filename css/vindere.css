@@ -1,0 +1,31 @@
+@media (min-width: 800px) {
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.ryk_ind_øjeblikket {
+  padding-left: 50px;
+}
+
+.ryk_ind_der_vandt {
+  padding-left: 230px;
+  margin-top: -20px;
+}
+
+.understregning {
+  width: 200px;
+  height: auto;
+  padding-left: 100px;
+}
+
+.foto-vinder_element {
+  padding-left: 50px;
+  width: 400px;
+}
+
+.foto-navn {
+  display: block;
+  margin-bottom: 20px;
+}

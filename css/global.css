@@ -1,0 +1,270 @@
+/* ************* RESET ************* */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ************* FARVER ************* */
+:root {
+  --background-color: #000;
+  --overskrift-color: #cc9d22;
+  --underoverskrift_1-color: #a93939;
+  --underoverskrift_2-color: #cc9d22;
+  --boks-color: #79d3ff;
+  --tekst-color: #ffffff;
+}
+
+/* ************* BODY ************* */
+body {
+  background-color: var(--background-color);
+}
+
+/* ************* OVERSKRIFTER ************* */
+h1 {
+  font-family: "Source Serif 4", serif;
+  font-weight: 900;
+  font-size: 3rem;
+  color: var(--overskrift-color);
+}
+
+h2 {
+  font-family: "Source Serif 4", serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: white;
+}
+
+p {
+  font-family: "Roboto";
+  font-size: 1rem;
+  color: var(--tekst-color);
+}
+
+h4 {
+  font-family: "Kalam";
+  font-size: 1.3rem;
+  color: var(--tekst-color);
+}
+
+/*************** FOOTER ***************/
+
+.footer {
+  background-color: #cc9d22;
+  width: 100%;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+
+.footer .logo {
+  width: 140px;
+}
+
+.footer .logo img {
+  width: 100%;
+  height: auto;
+}
+
+/* SOCIALE MEDIER */
+
+.socialemedia {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socialemedia img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.socialemedia img:hover {
+  transform: scale(1.1);
+}
+
+/* KONTAKT */
+
+.kontaktinfo {
+  color: white;
+  font-family: "Roboto";
+}
+
+.kontaktinfo p {
+  font-family: "Roboto";
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/*************** MOBIL ***************/
+
+@media (max-width: 800px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .footer .logo {
+    width: 120px;
+  }
+
+  .socialemedia img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+/****************** menu ****************/
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #0000;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 5px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #ffffff;
+  font-family: "roboto";
+  font-size: 1rem;
+  transition: color 0.3s;
+  text-align: end;
+}
+
+.menu a:hover {
+  color: #cc9d22;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+    background-color: transparent;
+    border: 0;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #0000;
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+
+.knapheader a {
+  text-decoration: none;
+  background-color: white;
+  color: #c39b7a;
+  border: 3px solid;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.knapheader a:hover {
+  color: black;
+}
+
+@media (min-width: 800px) {
+  /* ************* OVERSKRIFTER ************* */
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1.6rem;
+  }
+}
