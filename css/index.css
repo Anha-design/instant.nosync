@@ -1,2 +1,197 @@
+/* ******************************** */
+/* FORSIDE                           */
+/* MOBILE FIRST                     */
+/* ******************************** */
+
+/* ---------- HERO ---------- */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 900px;
+  overflow: hidden;
+}
+
+/* ---------- BLÅ BAGGRUND ---------- */
+
+.blaa-baggrund {
+  position: absolute;
+  top: 365px;
+  left: 0;
+
+  width: 100%;
+  height: 150px;
+
+  background-color: #47798e;
+
+  z-index: 1;
+}
+
+/* ---------- STORT HERO-BILLEDE ---------- */
+
+.hero-billede {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 2;
+}
+
+.hero-billede img {
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- HERO TEKST ---------- */
+
+.hero-tekst {
+  position: absolute;
+
+  top: 95px;
+  right: 5%;
+
+  width: 48%;
+
+  text-align: right;
+
+  z-index: 3;
+}
+
+/* ---------- OVERSKRIFT ---------- */
+
+.hero-tekst h1 {
+  font-size: 3.3rem;
+  line-height: 0.75;
+
+  margin: 0;
+}
+
+/* ---------- UNDEROVERSKRIFT ---------- */
+
+.hero-tekst h4 {
+  font-size: 1rem;
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  margin-top: 15px;
+
+  white-space: nowrap;
+}
+
+/* ---------- DATO ---------- */
+
+.dato {
+  display: inline-block;
+
+  margin-top: 10px;
+}
+
+.dato h2 {
+  font-family: "Roboto", sans-serif;
+
+  font-size: 1.35rem;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+/* ---------- RØD STREG ---------- */
+
+.roed-streg {
+  width: 100%;
+  height: auto;
+
+  margin-top: 3px;
+}
+
+/* ---------- DEL MED EN VEN ---------- */
+
+.del-knap {
+  display: block;
+
+  width: 190px;
+
+  margin-top: 12px;
+  margin-left: auto;
+}
+
+.del-knap img {
+  width: 100%;
+  height: auto;
+}
+
+/* ******************************** */
+/* DESKTOP                          */
+/* FÆLLES BREAKPOINT: 800PX         */
+/* ******************************** */
+
 @media (min-width: 800px) {
+  /* ---------- HERO ---------- */
+
+  .hero {
+    height: 1100px;
+  }
+
+  /* ---------- BLÅ BAGGRUND ---------- */
+
+  .blaa-baggrund {
+    top: 535px;
+
+    height: 265px;
+  }
+
+  /* ---------- STORT HERO-BILLEDE ---------- */
+
+  .hero-billede {
+    top: 0;
+    left: 0;
+
+    width: 78%;
+  }
+
+  /* ---------- HERO TEKST ---------- */
+
+  .hero-tekst {
+    top: 130px;
+    right: 4%;
+
+    width: 50%;
+  }
+
+  /* ---------- OVERSKRIFT ---------- */
+
+  .hero-tekst h1 {
+    font-size: 7rem;
+    line-height: 0.72;
+  }
+
+  /* ---------- UNDEROVERSKRIFT ---------- */
+
+  .hero-tekst h4 {
+    font-size: 1.7rem;
+
+    margin-top: 22px;
+  }
+
+  /* ---------- DATO ---------- */
+
+  .dato {
+    margin-top: 12px;
+  }
+
+  .dato h2 {
+    font-size: 2rem;
+  }
+
+  /* ---------- DEL MED EN VEN ---------- */
+
+  .del-knap {
+    width: 300px;
+
+    margin-top: 18px;
+  }
 }
