@@ -1,2 +1,106 @@
+/* Mobil */
+
+/* Billedet */
+
+.about-images {
+  margin-top: -80px;
+}
+
+.about-content {
+  background-color: #507b89;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Teksten */
+
+.overskrift_1 {
+  margin-bottom: 80px;
+  padding: 10px;
+}
+
+.about-text {
+  line-height: 1.5;
+  padding: 15px 25px 40px;
+}
+
+.about-text p {
+  margin: 0 0 18px;
+}
+
+/* Mobil afsnit 2*/
+
+.judges {
+  padding: 65px 20px 70px;
+}
+
+.judges h2 {
+  text-align: right;
+  color: var(--overskrift-color);
+  margin: 0;
+  font-size: 44px;
+}
+
+.intro {
+  text-align: right;
+  font-size: 22px;
+}
+
+/* Dommer-billeder */
+
+.judge-container {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  margin: 40px auto 0;
+}
+
+.polaroid {
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.judge1 {
+  margin-left: 5%;
+  transform: rotate(-8deg);
+  width: 60%;
+  z-index: 5;
+}
+
+.judge2 {
+  margin-left: 25%;
+  margin-top: -25%;
+  transform: rotate(4deg);
+  width: 65%;
+  z-index: 4;
+}
+
+.judge3 {
+  margin-left: 5%;
+  margin-top: -20%;
+  transform: rotate(-3deg);
+  width: 60%;
+  z-index: 3;
+}
+
+.judge4 {
+  margin-left: 25%;
+  margin-top: -30%;
+  transform: rotate(8deg);
+  width: 80%;
+  z-index: 2;
+}
+
+.judge5 {
+  margin-left: 5%;
+  margin-top: -30%;
+  transform: rotate(-7deg);
+  width: 75%;
+  z-index: 1;
+}
+
+/* Desktop version */
+
 @media (min-width: 800px) {
 }
