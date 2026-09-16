@@ -41,6 +41,20 @@ h2 {
   color: white;
 }
 
+h3 {
+  ont-family: "Source Serif 4", serif;
+  font-weight: 1100;
+  font-size: 25pt;
+  color: #cc9d22;
+}
+
+h5 {
+  ont-family: "Source Serif 4", serif;
+  font-weight: 2500;
+  font-size: 20pt;
+  color: #a93939;
+}
+
 p {
   font-family: "Roboto";
   font-size: 1rem;
@@ -50,6 +64,7 @@ p {
 h4 {
   font-family: "Kalam";
   font-size: 1.3rem;
+  font-weight: 200;
   color: var(--tekst-color);
 }
 

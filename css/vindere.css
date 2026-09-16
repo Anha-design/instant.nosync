@@ -1,31 +1,179 @@
-@media (min-width: 800px) {
+.section-title {
+  margin-left: 30px;
+}
+.vandt {
+  margin-left: 120px;
+  margin-top: -10px;
+}
+.understregning {
+  width: 40%;
+  height: auto;
+  margin-left: 120px;
 }
 
-p {
+/* ************* KAFFEBAR BLÅ BOX ************* */
+
+.kaffebaren {
+  margin-left: 30px;
+  width: 340px;
+  position: relative;
+}
+
+.kaffebaren p {
   text-wrap: pretty;
 }
 
-.ryk_ind_øjeblikket {
-  padding-left: 50px;
-}
-
-.ryk_ind_der_vandt {
-  padding-left: 230px;
-  margin-top: -20px;
-}
-
-.understregning {
-  width: 200px;
-  height: auto;
-  padding-left: 100px;
-}
-
-.foto-vinder_element {
-  padding-left: 50px;
-  width: 400px;
-}
-
-.foto-navn {
+.kaffebaren p br {
   display: block;
+}
+
+/* Billedet */
+.kaffebaren img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: block;
+}
+
+/* Blå boks bag billedet */
+.blaa-boks {
+  position: absolute;
+  z-index: 1;
+
+  width: 100vw;
+  height: 110px;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  top: 200px;
+
+  background-color: #2f687a;
+}
+
+.kaffebar_img {
+  margin-top: 20px;
+}
+/* ************* De nominerede ************* */
+.h5_margin {
+  margin-left: 150px;
+}
+
+.h4_margin {
+  margin-left: 150px;
+  margin-top: -8px;
+}
+
+.nominerede_p {
+  margin-left: 150px;
+  margin-right: 20px;
+}
+
+.kvinde_polariod_frames {
+  width: 25%;
+  height: auto;
+}
+.De_nomindrede {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.kvinde_polariod_frames {
+  width: 30%;
+  height: auto;
+}
+
+.nominerede_tekst {
+  flex: 1;
+}
+
+.nominerede_tekst h5 {
+  margin: 0;
+}
+
+.nominerede_tekst h4 {
+  margin: 0 0 30px 0;
+}
+
+.nominerede_tekst p {
+  max-width: 200px;
+}
+
+/* ************* De nominerede billeder og tekst ************* */
+
+.mand_i_bevaegelse {
+  width: 70%;
+  height: auto;
+  margin-left: 0px;
+}
+.billed_titel {
+  color: #a93939;
+  font-size: 16px;
+  font-weight: 900;
+}
+/* ************* DE NOMINEREDE ************* */
+
+.De_nominerede {
+  width: 340px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+/* Polaroid + titel */
+.billede_wrapper {
+  position: relative;
+  width: 340px;
+  margin: 0 auto;
   margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.mand_i_bevaegelse {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Titel ovenpå Polaroid */
+.billed_titel {
+  position: absolute;
+
+  left: 30px;
+  bottom: 35px;
+  color: #a93939;
+  z-index: 2;
+}
+
+/* Teksten under billedet */
+.De_nominerede p {
+  margin-top: 30px;
+  color: var(--underoverskrift_1-color);
+  font-family: "Roboto";
+  font-size: 1rem;
+  text-wrap: pretty;
+}
+.ekstra {
+  margin-top: 30px;
+  color: var(--underoverskrift_1-color);
+  font-family: "Roboto";
+  font-size: 1rem;
+  text-wrap: pretty;
+  margin-right: 20px;
+  position: relative;
+  width: 340px;
+  margin: 0 auto;
+}
+
+.stjerne_billede {
+  width: 100%;
+  height: auto;
+}
+
+/* ************* DESKTOP ************* */
+
+@media (min-width: 800px) {
+
+
+  
 }
