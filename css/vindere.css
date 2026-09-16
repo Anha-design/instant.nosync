@@ -1,91 +1,122 @@
+/* =========================================================
+   GENERELT
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =========================================================
+   OVERSKRIFT
+   ========================================================= */
+
+.no-widow {
+  text-wrap: pretty;
+}
+
 .section-title {
   margin-left: 30px;
 }
+
 .vandt {
   margin-left: 120px;
   margin-top: -10px;
 }
+
 .understregning {
-  width: 40%;
+  width: 30%;
   height: auto;
   margin-left: 120px;
 }
 
-/* ************* KAFFEBAR BLÅ BOX ************* */
+/* =========================================================
+   KAFFEBAR
+   ========================================================= */
+
+.kaffebarsamlet {
+  margin-left: 22px;
+}
 
 .kaffebaren {
-  margin-left: 30px;
-  width: 340px;
   position: relative;
+  width: 100%;
+  margin: 0;
 }
 
 .kaffebaren p {
-  text-wrap: pretty;
+  width: 460px;
+  max-width: calc(100% - 60px);
 }
 
-.kaffebaren p br {
-  display: block;
+.kaffebar_forfatter {
+  margin-bottom: 10px;
 }
 
-/* Billedet */
 .kaffebaren img {
   position: relative;
   z-index: 2;
-  width: 100%;
   display: block;
-}
-
-/* Blå boks bag billedet */
-.blaa-boks {
-  position: absolute;
-  z-index: 1;
-
-  width: 100vw;
-  height: 110px;
-
-  left: 50%;
-  transform: translateX(-50%);
-
-  top: 200px;
-
-  background-color: #2f687a;
+  width: 100%;
+  height: auto;
 }
 
 .kaffebar_img {
   margin-top: 20px;
 }
-/* ************* De nominerede ************* */
-.h5_margin {
-  margin-left: 150px;
+
+/* Blå boks */
+
+.blaa-boks {
+  position: absolute;
+  z-index: 1;
+
+  width: 100%;
+  height: 110px;
+
+  left: 0;
+  top: 200px;
+
+  background-color: #2f687a;
 }
 
-.h4_margin {
-  margin-left: 150px;
-  margin-top: -8px;
-}
+/* =========================================================
+   DE NOMINEREDE - INTRO
+   ========================================================= */
 
-.nominerede_p {
-  margin-left: 150px;
-  margin-right: 20px;
-}
-
-.kvinde_polariod_frames {
-  width: 25%;
-  height: auto;
-}
-.De_nomindrede {
+.de_nomindrede {
   display: flex;
   align-items: center;
   gap: 10px;
+
+  width: 100%;
+  max-width: 100%;
 }
 
 .kvinde_polariod_frames {
   width: 30%;
+  max-width: 30%;
   height: auto;
+
+  position: relative;
+  z-index: 2;
 }
 
 .nominerede_tekst {
   flex: 1;
+  min-width: 0;
+  margin-left: 10px;
 }
 
 .nominerede_tekst h5 {
@@ -100,80 +131,295 @@
   max-width: 200px;
 }
 
-/* ************* De nominerede billeder og tekst ************* */
+.nominerede_p {
+  margin-right: 20px;
+}
 
-.mand_i_bevaegelse {
-  width: 70%;
-  height: auto;
-  margin-left: 0px;
-}
-.billed_titel {
-  color: #a93939;
-  font-size: 16px;
-  font-weight: 900;
-}
-/* ************* DE NOMINEREDE ************* */
+/* =========================================================
+   DE TRE NOMINEREDE
+   ========================================================= */
 
 .De_nominerede {
   width: 340px;
-  margin: 0 auto;
-  margin-top: 40px;
+  max-width: calc(100% - 40px);
+
+  margin: 40px auto 100px;
 }
 
-/* Polaroid + titel */
+.nominering {
+  width: 100%;
+  max-width: 100%;
+}
+
 .billede_wrapper {
   position: relative;
-  width: 340px;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
 
-.mand_i_bevaegelse {
   width: 100%;
-  height: auto;
-  display: block;
+  max-width: 100%;
+
+  margin: 20px auto;
 }
 
-/* Titel ovenpå Polaroid */
+.billede_wrapper img {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Titel ovenpå billederne */
+
 .billed_titel {
   position: absolute;
 
   left: 30px;
   bottom: 35px;
+
   color: #a93939;
+  font-size: 16px;
+  font-weight: 900;
+
   z-index: 2;
 }
 
-/* Teksten under billedet */
+/* Tekst */
+
 .De_nominerede p {
   margin-top: 30px;
+
   color: var(--underoverskrift_1-color);
   font-family: "Roboto";
   font-size: 1rem;
+  line-height: 1.3;
+
   text-wrap: pretty;
 }
+
 .ekstra {
-  margin-top: 30px;
+  width: 340px;
+  max-width: calc(100% - 40px);
+
+  margin: 30px auto 0;
+
   color: var(--underoverskrift_1-color);
   font-family: "Roboto";
   font-size: 1rem;
+
   text-wrap: pretty;
-  margin-right: 20px;
-  position: relative;
-  width: 340px;
-  margin: 0 auto;
 }
 
-.stjerne_billede {
-  width: 100%;
-  height: auto;
-}
-
-/* ************* DESKTOP ************* */
+/* =========================================================
+   DESKTOP
+   ========================================================= */
 
 @media (min-width: 800px) {
+  /* -------------------------------------------------------
+     OVERSKRIFT
+     ------------------------------------------------------- */
 
+  .section-title {
+    margin-left: 30px;
+  }
 
-  
+  .Øjeblikket {
+    font-size: 80px;
+  }
+
+  .vandt {
+    margin-left: 280px;
+    margin-top: -10px;
+
+    font-size: 80px;
+  }
+
+  .understregning {
+    width: 23%;
+    margin-left: 280px;
+  }
+
+  /* -------------------------------------------------------
+     KAFFEBAR
+     ------------------------------------------------------- */
+
+  .kaffebaren {
+    position: relative;
+
+    width: 100%;
+    height: 500px;
+
+    margin: 0;
+  }
+
+  .kaffebar_titel {
+    font-size: 35px;
+
+    margin-left: 74px;
+    margin-top: 100px;
+  }
+
+  .kaffebar_forfatter {
+    width: auto !important;
+
+    margin-left: 74px;
+    margin-bottom: 20px;
+  }
+
+  .kaffebar_tekst {
+    width: 420px !important;
+    max-width: 420px !important;
+
+    margin-left: 74px;
+  }
+
+  /* -------------------------------------------------------
+     KAFFEBAR BILLEDE
+     ------------------------------------------------------- */
+
+  .kaffebar_img {
+    position: absolute;
+
+    z-index: 2;
+
+    /*
+      Billedet må gerne være stort,
+      men ALDRIG større end viewporten.
+    */
+    width: 800px !important;
+    max-width: 55vw !important;
+
+    height: auto;
+
+    left: 40vw;
+    top: -250px;
+
+    margin: 0;
+  }
+
+  /* -------------------------------------------------------
+     BLÅ BOKS
+     ------------------------------------------------------- */
+
+  .blaa-boks {
+    position: absolute;
+
+    z-index: 1;
+
+    width: 100%;
+    height: 245px;
+
+    left: 0;
+    top: 220px;
+
+    background-color: #2f687a;
+  }
+
+  /* -------------------------------------------------------
+     DE NOMINEREDE INTRO
+     ------------------------------------------------------- */
+
+  .de_nomindrede {
+    width: 100%;
+    max-width: 100%;
+
+    margin-left: 50px;
+  }
+
+  .kvinde_polariod_frames {
+    position: relative;
+
+    z-index: 2;
+
+    width: 30%;
+    max-width: 30%;
+
+    top: -120px;
+  }
+
+  .nominerede_tekst {
+    min-width: 0;
+    margin-left: 120px;
+  }
+
+  .nominerede_titel {
+    font-size: 80px;
+  }
+
+  .nominerede_undertitel {
+    font-size: 30px;
+  }
+
+  .nominerede_tekst p {
+    max-width: 700px;
+  }
+
+  /* -------------------------------------------------------
+     DE TRE NOMINEREDE
+     ------------------------------------------------------- */
+
+  .De_nominerede {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 50px;
+
+    /*
+      1140px er maksimum -
+      den må ikke fylde mere end skærmen.
+    */
+    width: 1140px;
+    max-width: calc(100% - 60px);
+
+    margin: 40px auto 100px;
+  }
+
+  .nominering {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .billede_wrapper {
+    position: relative;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+  }
+
+  .billede_wrapper img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+    display: block;
+  }
+
+  /* Titel */
+
+  .billed_titel {
+    position: absolute;
+
+    left: 20px;
+    bottom: 25px;
+
+    color: #a93939;
+
+    font-size: 16px;
+    font-weight: 900;
+
+    z-index: 2;
+  }
+
+  /* Tekst */
+
+  .nominering p {
+    margin-top: 20px;
+    margin-left: 20px;
+
+    color: #a93939;
+    font-family: "Roboto";
+    font-size: 1rem;
+    line-height: 1.3;
+  }
 }
