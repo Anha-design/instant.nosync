@@ -2,24 +2,16 @@
 
 /* Billedet */
 
+main {
+  position: relative;
+}
+
 .about-section {
   width: 100%;
 }
 
 .about-images {
   margin-top: -80px;
-  animation: hero-float 5s ease-in-out infinite;
-}
-
-@keyframes hero-float {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-0.5deg) scale(1);
-  }
-
-  50% {
-    transform: translateY(-15px) rotate(0.8deg) scale(1.025);
-  }
 }
 
 .about-content {
@@ -33,12 +25,13 @@
 .overskrift_1 {
   margin-bottom: 80px;
   padding: 10px 20px;
-  font-size: 2.5rem;
+  font-size: 35px;
 }
 
 .about-text {
   line-height: 1.5;
   padding: 15px 25px 40px;
+  font-size: 16px;
 }
 
 .about-text p {
@@ -55,13 +48,13 @@
   text-align: right;
   color: var(--overskrift-color);
   font-weight: 900;
-  font-size: 2.5rem;
+  font-size: 35px;
   margin: 0;
 }
 
 .intro {
   text-align: right;
-  font-size: 1rem;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -97,18 +90,6 @@
   transform: rotate(4deg);
   width: 65%;
   z-index: 4;
-  animation: hero-float 5s ease-in-out infinite;
-}
-
-@keyframes hero-float {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-0.5deg) scale(1);
-  }
-
-  50% {
-    transform: translateY(-15px) rotate(0.8deg) scale(1.025);
-  }
 }
 
 .judge3 {
@@ -125,17 +106,6 @@
   transform: rotate(8deg);
   width: 80%;
   z-index: 2;
-  animation: hero-float 5s ease-in-out infinite;
-}
-@keyframes hero-float {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-0.5deg) scale(1);
-  }
-
-  50% {
-    transform: translateY(-15px) rotate(0.8deg) scale(1.025);
-  }
 }
 
 .judge5 {
@@ -144,6 +114,39 @@
   transform: rotate(-7deg);
   width: 75%;
   z-index: 1;
+}
+
+.inspiration-knap1 {
+  position: absolute;
+  display: block;
+
+  width: 170px;
+
+  right: 30px;
+  bottom: 24px;
+
+  z-index: 6;
+  cursor: pointer;
+
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.inspiration-knap1 img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  transition: filter 0.25s ease;
+}
+
+/* HOVER */
+.inspiration-knap1:hover {
+  transform: scale(1.03);
+}
+
+.inspiration-knap1:hover img {
+  filter: sepia(0.7) saturate(3) hue-rotate(5deg) brightness(0.9);
 }
 
 /* Desktop version */
@@ -161,33 +164,48 @@
     flex-direction: row;
     align-items: center;
     width: 100%;
-    gap: 90px;
+    gap: 5%;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 80px 70px;
+    padding: 80px 7%;
   }
 
   /* Tekst til venstre */
   .about-text {
     order: 1;
-    width: 65ch;
+    flex: 1 1 45%;
+    max-width: 600px;
     color: white;
     line-height: 1.5;
+    font-size: 20px;
   }
 
   /* Billede til højre */
   .about-images {
     order: 2;
-    width: 900px;
-    max-width: 900px;
-    flex-shrink: 0;
-    margin-top: -300px;
+    flex: 1 1 55%;
+    width: 100%;
+    max-width: 850px;
+    min-width: 0;
+    margin-top: -200px;
+    animation: hero-float 5s ease-in-out infinite;
+  }
+
+  @keyframes hero-float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(-0.5deg) scale(1);
+    }
+
+    50% {
+      transform: translateY(-15px) rotate(0.8deg) scale(1.025);
+    }
   }
 
   .overskrift_1 {
-    font-size: 3rem;
+    font-size: 60px;
     margin: 0;
-    padding: 40px 90px;
+    padding: 40px calc(7% + 25px);
   }
 
   /* Overskrift til højre */
@@ -209,7 +227,8 @@
   .judges h2 {
     text-align: right;
     font-weight: 900;
-    font-size: 2.5rem;
+    font-size: 60px;
+    margin: 0;
   }
 
   /* Placering og rotation */
@@ -226,6 +245,18 @@
     width: 180%;
     z-index: 4;
     margin-left: -120px;
+    animation: hero-float 5s ease-in-out infinite;
+  }
+
+  @keyframes hero-float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(-0.5deg) scale(1);
+    }
+
+    50% {
+      transform: translateY(-15px) rotate(0.8deg) scale(1.025);
+    }
   }
 
   .judge3 {
@@ -240,8 +271,19 @@
     margin-left: -130px;
     margin-top: 80px;
     width: 220%;
-
     z-index: 2;
+    animation: hero-float 5s ease-in-out infinite;
+  }
+
+  @keyframes hero-float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(-0.5deg) scale(1);
+    }
+
+    50% {
+      transform: translateY(-15px) rotate(0.8deg) scale(1.025);
+    }
   }
 
   .judge5 {
@@ -250,5 +292,36 @@
     width: 200%;
 
     z-index: 1;
+  }
+
+  /* ---------- KNAP ---------- */
+
+  .inspiration-knap1 {
+    position: absolute;
+    display: block;
+
+    /*
+      Lidt mindre end før + længere ned,
+      så den ikke ligger oven i collagen.
+    */
+    width: 230px;
+
+    top: auto;
+    right: 0;
+    bottom: 35px;
+
+    margin: 0;
+
+    z-index: 5;
+  }
+
+  .inspiration-knap1 img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .intro {
+    font-size: 20px;
   }
 }

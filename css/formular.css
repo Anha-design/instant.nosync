@@ -10,6 +10,7 @@
 .overskift_2 {
   text-align: center;
   margin: 0 auto;
+  font-size: 35px;
 }
 
 /* Selve formularen */
@@ -168,7 +169,7 @@ textarea.formboks {
   border: none;
   border-radius: 10px;
   padding: 15px 16px;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   font-family: "Roboto";
   font-size: 15px;
 
@@ -184,33 +185,10 @@ textarea.formboks {
 .pic1_left {
   width: 40%;
   margin-bottom: 40px;
-  animation: hero-float 5s ease-in-out infinite;
-}
-@keyframes hero-float {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-0.5deg) scale(1);
-  }
-
-  50% {
-    transform: translateY(-15px) rotate(0.8deg) scale(1.025);
-  }
 }
 
 .pic2_right {
   width: 50%;
-  margin-bottom: 40px;
-  animation: hero-float 5s ease-in-out infinite;
-}
-@keyframes hero-float {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-0.5deg) scale(1);
-  }
-
-  50% {
-    transform: translateY(-15px) rotate(0.8deg) scale(1.025);
-  }
 }
 
 /* POPUP */
@@ -328,10 +306,32 @@ textarea.formboks {
 
   .pic1_left {
     width: 20%;
+    animation: hero-float 5s ease-in-out infinite;
+  }
+  @keyframes hero-float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(-0.5deg) scale(1);
+    }
+
+    50% {
+      transform: translateY(-15px) rotate(0.8deg) scale(1.025);
+    }
   }
 
   .pic2_right {
     width: 23%;
+    animation: hero-float 5s ease-in-out infinite;
+  }
+  @keyframes hero-float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(-0.5deg) scale(1);
+    }
+
+    50% {
+      transform: translateY(-15px) rotate(0.8deg) scale(1.025);
+    }
   }
 
   .popup h2 {
@@ -344,5 +344,15 @@ textarea.formboks {
 
   .popup p {
     font-size: 18px;
+  }
+
+  .overskift_2 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 60px;
+  }
+
+  .submit {
+    margin-bottom: 60px;
   }
 }
