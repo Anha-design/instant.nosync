@@ -1,12 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <title>Instant Ugen - Vindere</title>
+    <link rel="icon" type="image/webp" href="img/favicon.svg" />
 
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/vindere.css" />
+
+    <!-- Source Serif -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,6 +18,7 @@
       rel="stylesheet"
     />
 
+    <!-- Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,6 +26,7 @@
       rel="stylesheet"
     />
 
+    <!-- Kalam -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,139 +37,176 @@
     <script src="js/burger.js" defer></script>
     <script src="js/index.js" defer></script>
   </head>
+
   <body>
+    <!-- ================= HEADER ================= -->
+
     <header>
       <div class="logo">
         <a href="/">
-          <img src="logo/Logo.webp" alt="logo" />
+          <img src="logo/Logo.webp" alt="Instant Ugen logo" />
         </a>
       </div>
 
       <nav>
         <ul class="menu">
-          <li><a href="vindere.html">Vindere & nominerede</a></li>
-          <li><a href="info.html">Information</a></li>
-          <li><a href="formular.html">Deltag</a></li>
+          <li>
+            <a href="vindere.html">Vindere & nominerede</a>
+          </li>
+
+          <li>
+            <a href="info.html">Information</a>
+          </li>
+
+          <li>
+            <a href="formular.html">Deltag</a>
+          </li>
         </ul>
 
-        <button class="burger">
+        <button class="burger" aria-label="Åbn menu">
           <span class="line"></span>
           <span class="line"></span>
           <span class="line"></span>
         </button>
       </nav>
     </header>
-    *-----------Section title-----------* >
+
+    <!-- ================= MAIN ================= -->
+
     <main>
-      <div class="section-title">
+      <!-- ================= OVERSKRIFT ================= -->
+
+      <section class="section-title">
         <h3 class="Øjeblikket">Øjeblikket</h3>
+
         <h3 class="vandt">der vandt</h3>
+
         <img
           class="understregning"
           src="img/understregning_lille.svg"
-          alt="understregning"
+          alt="Rød understregning"
         />
-      </div>
-      *-----------Section blå box og billede-----------* >
-      <div class="kaffebaren">
-        <h4 class="kaffebar_titel">Kaffebaren</h4>
-        <p>Af: Mille Alia Koch Jensen</p>
+      </section>
 
-        <p class="kaffebar_tekst">
-          Et øjeblik fra kaffebaren, fanget midt i hverdagen. Ikke opstillet
-          eller perfekt - bare et ægte øjeblik, præcis som instant foto kan
-          noget helt særligt med.
-        </p>
+      <!-- ================= KAFFEBAR ================= -->
+
+      <section class="kaffebaren">
+        <div class="kaffebarsamlet">
+          <h4 class="kaffebar_titel">Kaffebaren</h4>
+
+          <p class="kaffebar_forfatter">Af: Mille Alia Koch Jensen</p>
+
+          <p class="kaffebar_tekst">
+            Et øjeblik fra kaffebaren, fanget midt i hverdagen. Ikke opstillet
+            eller perfekt - bare et ægte øjeblik, præcis som instant foto kan
+            noget helt særligt med.
+          </p>
+        </div>
 
         <img
           class="kaffebar_img"
           src="img/kaffebar_normineret.webp"
-          alt="Kaffebaren"
+          alt="Foto fra kaffebaren"
         />
-        <div class="blaa-boks"></div>
-      </div>
 
-      *-----------De nominerede-----------* >
-      <div class="De_nomindrede">
+        <div class="blaa-boks"></div>
+      </section>
+
+      <!-- ================= DE NOMINEREDE INTRO ================= -->
+
+      <section class="de_nomindrede">
         <img
           class="kvinde_polariod_frames"
           src="img/kvinde_polariod_frames.webp"
-          alt="kvinde i polariodramme"
+          alt="Collage af polaroidbilleder"
         />
 
         <div class="nominerede_tekst">
-          <h5>De nominerede</h5>
+          <h5 class="nominerede_titel">De nominerede</h5>
 
-          <h4>Flere fantastiske øjeblikke</h4>
+          <h4 class="nominerede_undertitel">Flere fantastiske øjeblikke</h4>
 
-          <p>
+          <p class="nominerede_p">
             Flere stærke bidrag var med i feltet til årets vinder. Gå på
             opdagelse i de nominerede og se de forskellige fortolkninger af
             øjeblikke fanget på instant.
           </p>
         </div>
-      </div>
+      </section>
 
-      *-----------De nominerede-----------* >
-      <div class="De_nominerede">
-        <div class="billede_wrapper">
-          <img
-            class="mand_i_bevaegelse"
-            src="img/mand_i_bevaegelse.webp"
-            alt="mand i bevægelse"
-          />
+      <!-- ================= DE TRE NOMINEREDE ================= -->
 
-          <h4 class="billed_titel">
-            01<br />
-            FANGET MELLEM SKEKUNDER
-          </h4>
-        </div>
+      <section class="De_nominerede">
+        <!-- ===== NOMINERING 01 ===== -->
 
-      <p>
-  Navn: Annebeth Faurby<br>
-  Et flygtigt sekund, bevaret i et sløret og analogt udtryk.
-</p>
+        <article class="nominering">
+          <div class="billede_wrapper">
+            <img
+              class="mand_i_bevaegelse"
+              src="img/mand_i_bevaegelse.webp"
+              alt="Mand i bevægelse"
+            />
 
-        <div class="billede_wrapper">
-          <img
-            class="cirkle_billede"
-            src="img/cirkel_uden_tekst.webp"
-            alt="mand i bevægelse"
-          />
+            <h4 class="billed_titel">
+              01<br />
+              FANGET MELLEM SEKUNDER
+            </h4>
+          </div>
 
-          <h4 class="billed_titel">
-            02<br />
-            FÆLLESKAB I CIRKEL
-          </h4>
-        </div>
+          <p>
+            Navn: Annebeth Faurby<br />
+            Et flygtigt sekund, bevaret i et sløret og analogt udtryk.
+          </p>
+        </article>
 
-        <p>Navn: Louise Simonsen<br>
-           Et øjeblik fanget i hverdagen</p>
-      </div>
+        <!-- ===== NOMINERING 02 ===== -->
 
+        <article class="nominering">
+          <div class="billede_wrapper">
+            <img
+              class="cirkle_billede"
+              src="img/cirkel_uden_tekst.webp"
+              alt="Fællesskab i cirkel"
+            />
 
+            <h4 class="billed_titel">
+              02<br />
+              FÆLLESSKAB I CIRKEL
+            </h4>
+          </div>
 
-        <div class="billede_wrapper">
-          <img
-            class="stjerne_billede"
-            src="img/stjerne.webp"
-            alt="mand i bevægelse"
-          />
+          <p>
+            Navn: Louise Simonsen<br />
+            Et øjeblik fanget i hverdagen.
+          </p>
+        </article>
 
-          <h4 class="billed_titel">
-            03<br />
-            FÆLLESKAB I CIRKEL
-          </h4>
-        </div>
+        <!-- ===== NOMINERING 03 ===== -->
 
-        <p class="ekstra">
-          Navn: Navn: Mathilde Dreyer <br>
+        <article class="nominering">
+          <div class="billede_wrapper">
+            <img
+              class="stjerne_billede"
+              src="img/stjerne.webp"
+              alt="Venner samlet i en cirkel"
+            />
 
-Et lille snapshot af venner der samles i en cirkel</p>
-      </div>
+            <h4 class="billed_titel">
+              03<br />
+              STARS
+            </h4>
+          </div>
 
+          <p>
+            Navn: Mathilde Dreyer<br />
+            Et lille snapshot af venner der samles i en cirkel.
+          </p>
+        </article>
+      </section>
     </main>
-    *-----------Footer-----------*
+
+    <!-- ================= FOOTER ================= -->
+
     <footer class="footer">
       <div class="footer-logo">
         <a href="/">
@@ -183,6 +226,7 @@ Et lille snapshot af venner der samles i en cirkel</p>
 
       <div class="kontaktinfo">
         <h3>KONTAKT:</h3>
+
         <p>E-mail: Instantugen@gmail.dk</p>
       </div>
     </footer>
