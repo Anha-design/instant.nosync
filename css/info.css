@@ -2,8 +2,24 @@
 
 /* Billedet */
 
+.about-section {
+  width: 100%;
+}
+
 .about-images {
   margin-top: -80px;
+  animation: hero-float 5s ease-in-out infinite;
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-0.5deg) scale(1);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(0.8deg) scale(1.025);
+  }
 }
 
 .about-content {
@@ -16,7 +32,8 @@
 
 .overskrift_1 {
   margin-bottom: 80px;
-  padding: 10px;
+  padding: 10px 20px;
+  font-size: 2.5rem;
 }
 
 .about-text {
@@ -37,16 +54,22 @@
 .judges h2 {
   text-align: right;
   color: var(--overskrift-color);
+  font-weight: 900;
+  font-size: 2.5rem;
   margin: 0;
-  font-size: 44px;
 }
 
 .intro {
   text-align: right;
-  font-size: 22px;
+  font-size: 1rem;
+  margin: 0;
 }
 
 /* Dommer-billeder */
+
+.judges-inner {
+  width: 100%;
+}
 
 .judge-container {
   position: relative;
@@ -74,6 +97,18 @@
   transform: rotate(4deg);
   width: 65%;
   z-index: 4;
+  animation: hero-float 5s ease-in-out infinite;
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-0.5deg) scale(1);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(0.8deg) scale(1.025);
+  }
 }
 
 .judge3 {
@@ -90,6 +125,17 @@
   transform: rotate(8deg);
   width: 80%;
   z-index: 2;
+  animation: hero-float 5s ease-in-out infinite;
+}
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-0.5deg) scale(1);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(0.8deg) scale(1.025);
+  }
 }
 
 .judge5 {
@@ -103,4 +149,106 @@
 /* Desktop version */
 
 @media (min-width: 800px) {
+  .about-section {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+  }
+
+  .about-content {
+    background-color: #507b89;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 90px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 80px 70px;
+  }
+
+  /* Tekst til venstre */
+  .about-text {
+    order: 1;
+    width: 65ch;
+    color: white;
+    line-height: 1.5;
+  }
+
+  /* Billede til højre */
+  .about-images {
+    order: 2;
+    width: 900px;
+    max-width: 900px;
+    flex-shrink: 0;
+    margin-top: -300px;
+  }
+
+  .overskrift_1 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 40px 90px;
+  }
+
+  /* Overskrift til højre */
+
+  .judges-inner {
+    width: 80%;
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+
+  /* Billederne */
+  .judge-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1800px;
+  }
+
+  .judges h2 {
+    text-align: right;
+    font-weight: 900;
+    font-size: 2.5rem;
+  }
+
+  /* Placering og rotation */
+
+  .judge1 {
+    margin-top: -10px;
+    margin-right: 50px;
+    width: 150%;
+    z-index: 5;
+  }
+
+  .judge2 {
+    margin-top: 80px;
+    width: 180%;
+    z-index: 4;
+    margin-left: -120px;
+  }
+
+  .judge3 {
+    margin-left: -80px;
+    margin-top: -20px;
+    width: 170%;
+
+    z-index: 3;
+  }
+
+  .judge4 {
+    margin-left: -130px;
+    margin-top: 80px;
+    width: 220%;
+
+    z-index: 2;
+  }
+
+  .judge5 {
+    margin-left: -150px;
+    margin-top: 60px;
+    width: 200%;
+
+    z-index: 1;
+  }
 }
