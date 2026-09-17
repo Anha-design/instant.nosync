@@ -18,9 +18,8 @@ header .logo {
 .hero {
   position: relative;
   width: 100%;
-  height: 700px;
+  height: 600px;
   margin-top: -94px;
-  overflow: hidden;
 }
 
 /* ---------- BLÅ BAGGRUND ---------- */
@@ -43,8 +42,6 @@ header .logo {
   left: 2%;
   width: 90%;
   z-index: 2;
-
-  animation: hero-float 5s ease-in-out infinite;
 }
 
 .hero-billede img {
@@ -144,7 +141,7 @@ header .logo {
 .hvad-er {
   position: relative;
   width: 100%;
-  padding: 45px 7% 40px;
+  padding: 45px 0% 40px;
   background-color: #000;
   overflow: hidden;
 }
@@ -290,11 +287,19 @@ header .logo {
   margin-top: 5px;
 }
 
-.historie-tekst h4,
-.analog-comeback {
+.historie-tekst h4 {
   margin: 12px 0 0;
   font-family: "Kalam", cursive;
   font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #c63c3c;
+}
+
+.analog-comeback {
+  margin: 12px 0 0;
+  font-family: "Kalam", cursive;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.35;
   color: #c63c3c;
@@ -328,7 +333,6 @@ header .logo {
 
 .kamera-bunke {
   width: 100%;
-  animation: float-kamera 3s ease-in-out infinite;
 }
 
 @keyframes float-kamera {
@@ -375,8 +379,6 @@ header .logo {
   width: 110px;
   height: 60px;
   margin-bottom: 20px;
-
-  animation: nu-bevaegelse 2.5s ease-in-out infinite;
 }
 
 @keyframes nu-bevaegelse {
@@ -507,7 +509,6 @@ header .logo {
   height: auto;
 
   z-index: 3;
-  animation: inspiration-float 5s ease-in-out infinite;
 }
 
 @keyframes inspiration-float {
@@ -567,6 +568,26 @@ header .logo {
 /* ======================================== */
 
 @media (min-width: 800px) {
+  /* ====================================== */
+  /* ANIMATIONER - KUN DESKTOP              */
+  /* ====================================== */
+
+  .hero-billede {
+    animation: hero-float 5s ease-in-out infinite;
+  }
+
+  .kamera-bunke {
+    animation: float-kamera 3s ease-in-out infinite;
+  }
+
+  .nu-overskrift {
+    animation: nu-bevaegelse 2.5s ease-in-out infinite;
+  }
+
+  .inspiration-collage {
+    animation: inspiration-float 5s ease-in-out infinite;
+  }
+
   /* ====================================== */
   /* HERO                                   */
   /* ====================================== */
@@ -888,7 +909,7 @@ header .logo {
     margin: 5px 0 0;
 
     font-family: "Kalam", cursive;
-    font-size: 1.25rem;
+    font-size: 1.7rem;
     font-weight: 400;
 
     color: #c94343;
