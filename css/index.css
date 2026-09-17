@@ -1,14 +1,25 @@
-/* ******************************** */
-/* FORSIDE                           */
-/* MOBILE FIRST                     */
-/* ******************************** */
+/* ======================================== */
+/* FORSIDE - MOBILE FIRST                   */
+/* ======================================== */
 
-/* ---------- HERO ---------- */
+/* ======================================== */
+/* HEADER - KUN FORSIDEN                    */
+/* ======================================== */
+
+header {
+  z-index: 1000;
+  padding: 5px 20px;
+}
+
+header .logo {
+  width: 90px;
+}
 
 .hero {
   position: relative;
   width: 100%;
-  height: 900px;
+  height: 700px;
+  margin-top: -94px;
   overflow: hidden;
 }
 
@@ -16,69 +27,65 @@
 
 .blaa-baggrund {
   position: absolute;
-  top: 365px;
+  top: 420px;
   left: 0;
-
   width: 100%;
-  height: 150px;
-
+  height: 135px;
   background-color: #47798e;
-
   z-index: 1;
 }
 
-/* ---------- STORT HERO-BILLEDE ---------- */
+/* ---------- HERO-BILLEDE ---------- */
 
 .hero-billede {
   position: absolute;
-
-  top: 0;
-  left: 0;
-
-  width: 100%;
-
+  top: 18px;
+  left: 2%;
+  width: 90%;
   z-index: 2;
+
+  animation: hero-float 5s ease-in-out infinite;
 }
 
 .hero-billede img {
+  display: block;
   width: 100%;
   height: auto;
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-0.5deg) scale(1);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(0.8deg) scale(1.025);
+  }
 }
 
 /* ---------- HERO TEKST ---------- */
 
 .hero-tekst {
   position: absolute;
-
-  top: 95px;
+  top: 185px;
   right: 5%;
-
-  width: 48%;
-
+  width: 53%;
   text-align: right;
-
   z-index: 3;
 }
 
-/* ---------- OVERSKRIFT ---------- */
-
 .hero-tekst h1 {
-  font-size: 3.3rem;
-  line-height: 0.75;
-
   margin: 0;
+  font-size: 2.85rem;
+  line-height: 0.75;
 }
 
-/* ---------- UNDEROVERSKRIFT ---------- */
-
 .hero-tekst h4 {
-  font-size: 1rem;
+  margin-top: 12px;
+  font-size: 0.9rem;
   font-weight: 400;
-
   line-height: 1.1;
-
-  margin-top: 15px;
-
   white-space: nowrap;
 }
 
@@ -86,25 +93,20 @@
 
 .dato {
   display: inline-block;
-
   margin-top: 10px;
 }
 
 .dato h2 {
   font-family: "Roboto", sans-serif;
-
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 700;
-
   white-space: nowrap;
 }
 
-/* ---------- RØD STREG ---------- */
-
 .roed-streg {
+  display: block;
   width: 100%;
   height: auto;
-
   margin-top: 3px;
 }
 
@@ -112,72 +114,495 @@
 
 .del-knap {
   display: block;
-
-  width: 190px;
-
+  width: 155px;
   margin-top: 12px;
   margin-left: auto;
+
+  cursor: pointer;
+  transition: transform 0.25s ease;
 }
 
 .del-knap img {
+  display: block;
   width: 100%;
+  height: auto;
+  transition: filter 0.25s ease;
+}
+
+.del-knap:hover {
+  transform: scale(1.03);
+}
+
+.del-knap:hover img {
+  filter: sepia(0.7) saturate(3) hue-rotate(5deg) brightness(0.9);
+}
+
+/* ======================================== */
+/* HVAD ER INSTANT UGEN?                    */
+/* ======================================== */
+
+.hvad-er {
+  position: relative;
+  width: 100%;
+  padding: 45px 7% 40px;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.hvad-er-overskrift {
+  width: 90%;
+  margin: 0 auto 25px;
+}
+
+.hvad-er-overskrift h2 {
+  margin: 0;
+  font-family: "Source Serif 4", serif;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+  color: white;
+}
+
+.hvad-er-overskrift h2 span {
+  display: block;
+  margin-left: 65px;
+}
+
+.gul-streg {
+  display: block;
+  width: 85%;
+  height: auto;
+  margin-top: 8px;
+  margin-left: auto;
+}
+
+.hvad-er-tekst {
+  display: flex;
+  flex-direction: column;
+}
+
+.hvad-er-tekst p {
+  margin-bottom: 28px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.hvad-er-blaa-streg {
+  position: absolute;
+  left: 0;
+  bottom: 220px;
+  width: 100%;
+  height: 22px;
+  background-color: #47798e;
+  z-index: 1;
+}
+
+.hvad-er-billede {
+  position: relative;
+  display: block;
+  width: 190px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: 0;
+  z-index: 2;
+}
+
+/* ======================================== */
+/* HVORFOR INSTANT UGEN?                    */
+/* ======================================== */
+
+.hvorfor {
+  position: relative;
+  width: 100%;
+  padding: 35px 7% 70px;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.hvorfor-indhold {
+  width: 100%;
+}
+
+.hvorfor-overskrift {
+  width: 100%;
+  margin: 0 0 45px;
+}
+
+.hvorfor-overskrift h2 {
+  margin: 0;
+  font-family: "Source Serif 4", serif;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 0.95;
+  color: #c63c3c;
+}
+
+.hvorfor-overskrift h2 span {
+  display: block;
+  margin-left: 55px;
+}
+
+/* ======================================== */
+/* HISTORIE GENERELT                        */
+/* ======================================== */
+
+.historie {
+  position: relative;
+  width: 100%;
+  margin-bottom: 65px;
+}
+
+.historie-billede {
+  display: block;
+  max-width: 100%;
   height: auto;
 }
 
-/* ******************************** */
-/* DESKTOP                          */
-/* FÆLLES BREAKPOINT: 800PX         */
-/* ******************************** */
+.historie-tekst p,
+.nu-tekst p {
+  margin: 0 0 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.35;
+  color: white;
+}
+
+.aarstal {
+  display: block;
+  width: fit-content;
+  margin-bottom: 15px;
+}
+
+.aarstal h3 {
+  margin: 0;
+  font-family: "Source Serif 4", serif;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #c63c3c;
+}
+
+.aarstal-streg {
+  display: block;
+  width: 130px;
+  height: auto;
+  margin-top: 5px;
+}
+
+.historie-tekst h4,
+.analog-comeback {
+  margin: 12px 0 0;
+  font-family: "Kalam", cursive;
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #c63c3c;
+}
+
+/* ======================================== */
+/* 1948                                     */
+/* ======================================== */
+
+.historie-1948 {
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  gap: 25px;
+  align-items: center;
+}
+
+.edwin-billede {
+  width: 100%;
+}
+
+/* ======================================== */
+/* 1978                                     */
+/* ======================================== */
+
+.historie-1978 {
+  display: grid;
+  grid-template-columns: 1fr 45%;
+  gap: 20px;
+  align-items: center;
+}
+
+.kamera-bunke {
+  width: 100%;
+  animation: float-kamera 3s ease-in-out infinite;
+}
+
+@keyframes float-kamera {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg) scale(1);
+  }
+
+  50% {
+    transform: translateY(-18px) rotate(2deg) scale(1.03);
+  }
+}
+/* ======================================== */
+/* 2001                                     */
+/* ======================================== */
+
+.historie-2001 {
+  display: grid;
+  grid-template-columns: 45% 1fr;
+  gap: 25px;
+  align-items: center;
+}
+
+.kamera-2001 {
+  width: 100%;
+}
+
+/* ======================================== */
+/* NU                                       */
+/* ======================================== */
+
+.historie-nu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.nu-overskrift {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  height: 60px;
+  margin-bottom: 20px;
+
+  animation: nu-bevaegelse 2.5s ease-in-out infinite;
+}
+
+@keyframes nu-bevaegelse {
+  0%,
+  100% {
+    transform: rotate(-2deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(2deg) scale(1.08);
+  }
+}
+
+.nu-overskrift h3 {
+  position: relative;
+  margin: 0;
+  font-family: "Source Serif 4", serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #c63c3c;
+  z-index: 2;
+}
+
+.nu-overskrift img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.nu-tekst {
+  width: 100%;
+}
+
+.nu-billede {
+  width: 80%;
+  margin-top: 20px;
+  margin-left: auto;
+}
+
+.analog-comeback {
+  width: 100%;
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* ======================================== */
+/* INSPIRATION - MOBIL                      */
+/* ======================================== */
+
+.inspiration {
+  position: relative;
+  width: 100%;
+  height: 760px;
+  padding: 0;
+  background-color: #000;
+
+  /*
+    VIGTIGT:
+    Vi skjuler kun vandret overflow.
+    Collagen må gerne gå op over den blå streg.
+  */
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.inspiration-blaa-streg {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: #47798e;
+  z-index: 1;
+}
+
+.inspiration-indhold {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* ---------- TEKST ---------- */
+
+.inspiration-tekst {
+  position: absolute;
+  top: 120px;
+  left: 7%;
+  width: 210px;
+  z-index: 5;
+}
+
+.inspiration-tekst h2 {
+  margin: 0 0 8px;
+  font-family: "Source Serif 4", serif;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+  color: white;
+}
+
+.inspiration-tekst p {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: white;
+}
+
+/* ---------- COLLAGE ---------- */
+
+.inspiration-collage {
+  position: absolute;
+  display: block;
+
+  /*
+    Lidt længere mod VENSTRE på mobil.
+    Den ligger stadig over den blå streg.
+  */
+  top: 48px;
+  left: 24%;
+  right: auto;
+
+  width: 390px;
+  max-width: none;
+  height: auto;
+
+  z-index: 3;
+  animation: inspiration-float 5s ease-in-out infinite;
+}
+
+@keyframes inspiration-float {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(5px, -10px) rotate(0.5deg);
+  }
+
+  50% {
+    transform: translate(0, -18px) rotate(0deg);
+  }
+
+  75% {
+    transform: translate(-5px, -10px) rotate(-0.5deg);
+  }
+}
+
+/* ---------- KNAP ---------- */
+
+.inspiration-knap {
+  position: absolute;
+  display: block;
+
+  width: 170px;
+
+  right: 7%;
+  bottom: 24px;
+
+  z-index: 6;
+
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.inspiration-knap img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  transition: filter 0.25s ease;
+}
+
+/* HOVER */
+.inspiration-knap:hover {
+  transform: scale(1.03);
+}
+
+.inspiration-knap:hover img {
+  filter: sepia(0.7) saturate(3) hue-rotate(5deg) brightness(0.9);
+}
+/* ======================================== */
+/* DESKTOP - FRA 800PX                      */
+/* ======================================== */
 
 @media (min-width: 800px) {
-  /* ---------- HERO ---------- */
+  /* ====================================== */
+  /* HERO                                   */
+  /* ====================================== */
 
   .hero {
-    height: 1100px;
+    height: 1850px;
+    margin-top: -94px;
   }
-
-  /* ---------- BLÅ BAGGRUND ---------- */
-
-  .blaa-baggrund {
-    top: 535px;
-
-    height: 265px;
-  }
-
-  /* ---------- STORT HERO-BILLEDE ---------- */
 
   .hero-billede {
     top: 0;
     left: 0;
-
-    width: 78%;
+    width: 75%;
   }
 
-  /* ---------- HERO TEKST ---------- */
+  .blaa-baggrund {
+    top: 670px;
+    width: 100%;
+    height: 265px;
+  }
 
   .hero-tekst {
-    top: 130px;
+    top: 220px;
     right: 4%;
-
     width: 50%;
   }
-
-  /* ---------- OVERSKRIFT ---------- */
 
   .hero-tekst h1 {
     font-size: 7rem;
     line-height: 0.72;
   }
 
-  /* ---------- UNDEROVERSKRIFT ---------- */
-
   .hero-tekst h4 {
-    font-size: 1.7rem;
-
     margin-top: 22px;
+    font-size: 1.7rem;
   }
-
-  /* ---------- DATO ---------- */
 
   .dato {
     margin-top: 12px;
@@ -187,11 +612,708 @@
     font-size: 2rem;
   }
 
-  /* ---------- DEL MED EN VEN ---------- */
-
   .del-knap {
-    width: 300px;
-
+    width: 280px;
     margin-top: 18px;
+  }
+
+  /* ====================================== */
+  /* HVAD ER INSTANT UGEN?                  */
+  /* ====================================== */
+
+  .hvad-er {
+    position: relative;
+    width: 100%;
+    padding: 55px 6% 40px;
+    background-color: #000;
+    overflow: hidden;
+  }
+
+  .hvad-er-overskrift {
+    width: 520px;
+    margin: 0 0 25px;
+  }
+
+  .hvad-er-overskrift h2 {
+    font-size: 3.5rem;
+    line-height: 1;
+  }
+
+  .hvad-er-overskrift h2 span {
+    margin-left: 55px;
+  }
+
+  .gul-streg {
+    width: 85%;
+    margin-top: 8px;
+    margin-left: 55px;
+  }
+
+  .hvad-er-tekst {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    width: 75%;
+  }
+
+  .hvad-er-tekst p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  .hvad-er-blaa-streg {
+    bottom: 300px;
+    height: 50px;
+  }
+
+  .hvad-er-billede {
+    position: relative;
+    display: block;
+    width: 350px;
+    margin-top: -180px;
+    margin-left: auto;
+    margin-right: 4%;
+    z-index: 2;
+  }
+
+  /* ====================================== */
+  /* HVORFOR INSTANT UGEN?                  */
+  /* ====================================== */
+
+  .hvorfor {
+    position: relative;
+    width: 100%;
+    padding: 45px 6% 110px;
+    background-color: #000;
+    overflow: hidden;
+  }
+
+  .hvorfor-indhold {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .hvorfor-overskrift {
+    width: 520px;
+    margin: 0 0 65px;
+  }
+
+  .hvorfor-overskrift h2 {
+    font-size: 3.5rem;
+    line-height: 0.95;
+  }
+
+  .hvorfor-overskrift h2 span {
+    display: block;
+    margin-left: 55px;
+  }
+
+  .historie {
+    width: 100%;
+    margin-bottom: 90px;
+  }
+
+  .historie-tekst p,
+  .nu-tekst p {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .aarstal {
+    margin-bottom: 18px;
+  }
+
+  .aarstal h3 {
+    font-size: 2.4rem;
+  }
+
+  .aarstal-streg {
+    display: block;
+    width: 140px;
+    height: auto;
+    margin-top: 8px;
+    margin-bottom: 14px;
+    transform: scaleY(2.5);
+    transform-origin: left center;
+  }
+
+  .historie-tekst h4,
+  .analog-comeback {
+    font-size: 1.35rem;
+    color: #c63c3c;
+  }
+
+  /* ---------- 1948 ---------- */
+
+  .historie-1948 {
+    display: grid;
+    grid-template-columns: 40% 42%;
+    gap: 7%;
+    align-items: center;
+    width: 90%;
+  }
+
+  .edwin-billede {
+    width: 600px;
+    max-width: none;
+    height: auto;
+  }
+
+  /* ---------- 1978 ---------- */
+
+  .historie-1978 {
+    display: grid;
+    grid-template-columns: 42% 42%;
+    gap: 7%;
+    align-items: center;
+    width: 90%;
+    transform: translateX(90px);
+  }
+
+  .historie-1978 .historie-tekst {
+    justify-self: start;
+  }
+
+  .kamera-bunke {
+    width: 600px;
+    max-width: none;
+  }
+
+  /* ---------- 2001 ---------- */
+
+  .historie-2001 {
+    display: grid;
+    grid-template-columns: 40% 42%;
+    gap: 7%;
+    align-items: center;
+    width: 90%;
+  }
+
+  .kamera-2001 {
+    width: 440px;
+    justify-self: center;
+  }
+
+  /* ---------- NU ---------- */
+
+  .historie-nu {
+    position: relative;
+    width: 900px;
+    min-height: 520px;
+    margin: 20px auto 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+
+    column-gap: 55px;
+    align-items: start;
+  }
+
+  .nu-overskrift {
+    position: relative;
+
+    grid-column: 1;
+    grid-row: 1;
+
+    width: 190px;
+    height: 75px;
+
+    margin-left: 120px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nu-overskrift h3 {
+    position: relative;
+    margin: 0;
+
+    font-family: "Source Serif 4", serif;
+    font-size: 2rem;
+    font-weight: 800;
+
+    color: #c94343;
+    z-index: 2;
+  }
+
+  .nu-overskrift img {
+    position: absolute;
+
+    width: 190px;
+    height: auto;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .nu-tekst {
+    grid-column: 1;
+    grid-row: 2;
+
+    width: 430px;
+    margin: 0;
+  }
+
+  .nu-tekst p {
+    margin: 0 0 18px;
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .nu-billede {
+    grid-column: 2;
+    grid-row: 1 / 4;
+
+    width: 600px;
+    max-width: none;
+
+    margin-top: 20px;
+
+    align-self: start;
+    justify-self: start;
+  }
+
+  .analog-comeback {
+    grid-column: 1;
+    grid-row: 3;
+
+    margin: 5px 0 0;
+
+    font-family: "Kalam", cursive;
+    font-size: 1.25rem;
+    font-weight: 400;
+
+    color: #c94343;
+  }
+
+  /* ====================================== */
+  /* INSPIRATION - DESKTOP                  */
+  /* ====================================== */
+
+  .inspiration {
+    position: relative;
+    width: 100%;
+    height: 1280px;
+
+    background-color: #000;
+
+    /*
+      Vigtigt:
+      Collagen må gå op over stregen uden at blive klippet.
+    */
+    overflow: visible;
+  }
+
+  /* ---------- BLÅ STREG ---------- */
+
+  .inspiration-blaa-streg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 45px;
+
+    background-color: #47798e;
+    z-index: 1;
+  }
+
+  /* ---------- INDHOLD ---------- */
+
+  .inspiration-indhold {
+    position: relative;
+
+    width: 1200px;
+    max-width: calc(100% - 80px);
+    height: 100%;
+
+    margin: 0 auto;
+  }
+
+  /* ---------- TEKST ---------- */
+
+  .inspiration-tekst {
+    position: absolute;
+
+    top: 95px;
+    left: 70px;
+
+    width: 320px;
+
+    z-index: 5;
+  }
+
+  .inspiration-tekst h2 {
+    margin: 0 0 10px;
+
+    font-family: "Source Serif 4", serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1;
+
+    color: #fff;
+  }
+
+  .inspiration-tekst p {
+    margin: 0;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.35;
+
+    color: #fff;
+  }
+
+  /* ---------- COLLAGE ---------- */
+
+  .inspiration-collage {
+    position: absolute;
+    display: block;
+
+    width: 900px;
+    max-width: none;
+    height: auto;
+
+    /*
+      Billedet går OP over den blå streg.
+      Det bliver ikke klippet af sektionen.
+    */
+    top: -70px;
+    right: -20px;
+
+    z-index: 3;
+  }
+
+  /* ---------- KNAP ---------- */
+
+  .inspiration-knap {
+    position: absolute;
+    display: block;
+
+    /*
+      Lidt mindre end før + længere ned,
+      så den ikke ligger oven i collagen.
+    */
+    width: 230px;
+
+    top: auto;
+    right: 0;
+    bottom: 35px;
+
+    margin: 0;
+
+    z-index: 5;
+  }
+
+  .inspiration-knap img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* ---------- FOOTER ---------- */
+
+  .footer {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+/* ======================================== */
+/* DEL MED EN VEN - POPUP                   */
+/* ======================================== */
+
+/* Mørkt lag over hele siden */
+.del-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Denne class tilføjes med JavaScript */
+.del-popup.aktiv {
+  display: flex;
+}
+
+/* ======================================== */
+/* SELVE POPUP-BOKSEN                       */
+/* ======================================== */
+
+.del-popup-boks {
+  position: relative;
+
+  width: 850px;
+  max-width: 90vw;
+
+  padding: 90px 65px 65px;
+
+  box-sizing: border-box;
+
+  background-color: #000;
+  border: 25px solid #f3eee3;
+
+  color: #fff;
+}
+
+/* ======================================== */
+/* LUK-KNAP / X                             */
+/* ======================================== */
+
+.del-popup-luk {
+  position: absolute;
+
+  top: 35px;
+  right: 35px;
+
+  width: 55px;
+  height: 55px;
+
+  padding: 0;
+
+  border: 4px solid #f3eee3;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.del-popup-luk span {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 38px;
+  height: 4px;
+
+  background-color: #f3eee3;
+
+  transform-origin: center;
+}
+
+.del-popup-luk span:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.del-popup-luk span:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* ======================================== */
+/* POPUP OVERSKRIFT                         */
+/* ======================================== */
+
+.del-popup-overskrift {
+  text-align: left;
+}
+
+.del-popup-overskrift p {
+  margin: 0 0 2px;
+
+  font-family: "Kalam", cursive;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.del-popup-overskrift h2 {
+  margin: 0;
+
+  font-family: "Source Serif 4", serif;
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 0.95;
+
+  color: #d4a31d;
+}
+
+.del-popup-overskrift h3 {
+  margin: 7px 0 0;
+
+  font-family: "Kalam", cursive;
+  font-size: 2.7rem;
+  font-weight: 400;
+  line-height: 1.1;
+
+  color: #fff;
+}
+
+/* ======================================== */
+/* KOPIER LINK                              */
+/* ======================================== */
+
+.del-popup-link {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  margin-top: 70px;
+  padding: 14px 25px;
+
+  box-sizing: border-box;
+
+  background-color: #f3eee3;
+  border-radius: 8px;
+}
+
+.del-popup-link span {
+  flex-shrink: 0;
+
+  margin-right: 55px;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  color: #9c9c9c;
+}
+
+.del-popup-link button {
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+
+  color: #9c9c9c;
+
+  text-decoration: underline;
+
+  cursor: pointer;
+}
+
+/* ======================================== */
+/* BUNDTEKST                                */
+/* ======================================== */
+
+.del-popup-bund {
+  display: inline-block;
+
+  margin-top: 28px;
+}
+
+.del-popup-bund p {
+  margin: 0;
+
+  font-family: "Kalam", cursive;
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  color: #fff;
+}
+
+.del-popup-roed-streg {
+  width: 145px;
+  height: 4px;
+
+  margin-top: 3px;
+  margin-left: auto;
+
+  background-color: #b73532;
+
+  transform: rotate(-2deg);
+}
+
+/* ======================================== */
+/* POPUP MOBIL                              */
+/* BEHOLDER BREAKPOINT PÅ 800PX             */
+/* ======================================== */
+
+@media (max-width: 800px) {
+  .del-popup {
+    padding: 18px;
+  }
+
+  .del-popup-boks {
+    width: 100%;
+    max-width: 430px;
+
+    padding: 75px 25px 40px;
+
+    border-width: 12px;
+  }
+
+  .del-popup-luk {
+    top: 18px;
+    right: 18px;
+
+    width: 42px;
+    height: 42px;
+
+    border-width: 3px;
+  }
+
+  .del-popup-luk span {
+    width: 28px;
+    height: 3px;
+  }
+
+  .del-popup-overskrift p {
+    font-size: 2rem;
+  }
+
+  .del-popup-overskrift h2 {
+    font-size: 2.5rem;
+  }
+
+  .del-popup-overskrift h3 {
+    font-size: 1.8rem;
+  }
+
+  .del-popup-link {
+    margin-top: 45px;
+
+    padding: 12px 15px;
+
+    gap: 15px;
+  }
+
+  .del-popup-link span {
+    margin-right: 0;
+
+    font-size: 0.95rem;
+  }
+
+  .del-popup-link button {
+    min-width: 0;
+
+    overflow: hidden;
+
+    font-size: 0.95rem;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .del-popup-bund {
+    margin-top: 22px;
+  }
+
+  .del-popup-bund p {
+    font-size: 1.05rem;
+  }
+
+  .del-popup-roed-streg {
+    width: 95px;
+    height: 3px;
   }
 }
