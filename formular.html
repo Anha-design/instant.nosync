@@ -1,198 +1,208 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instant Ugen - Formular</title>
+    <link rel="icon" type="image/webp" href="img/favicon.svg" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Instant Ugen - Formular</title>
-  <link rel="icon" type="image/webp" href="img/favicon.svg" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/formular.css" />
 
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/formular.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
-    rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet" />
+    <script src="js/burger.js" defer></script>
+    <script src="js/formular.js" defer></script>
+  </head>
 
-  <script src="js/burger.js" defer></script>
-  <script src="js/formular.js" defer></script>
-</head>
-
-<body>
-  <header>
-    <div class="logo">
-      <a href="/">
-        <img src="logo/Logo.webp" alt="logo" />
-      </a>
-    </div>
-
-    <nav>
-      <ul class="menu">
-        <li><a href="vindere.html">Vindere & nominerede</a></li>
-        <li><a href="info.html">Information</a></li>
-        <li><a href="formular.html">Deltag</a></li>
-      </ul>
-
-      <button class="burger">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </button>
-    </nav>
-  </header>
-  <main>
-    <h1 class="overskift_2">Del dine instant</h1>
-
-    <section id="form-section">
-      <form id="webform">
-
-
-        <div class="box-row1">
-
-          <div>
-            <label for="navn">Dit fulde navn</label>
-            <input class="formboks" type="text" name="Dit fulde navn" placeholder="Dit fulde navn" required>
-          </div>
-
-          <div>
-            <label for="navn">E-mail</label>
-            <input class="formboks" type="text" name="E-mail" placeholder="din@mail.dk" required>
-          </div>
-        </div>
-
-        <div class="box-row">
-          <label for="navn">Titel</label>
-          <input class="formboks" type="text" name="Titel" placeholder="Skriv din titel" required>
-
-          <label for="navn">Beskrivelse bag dit billede</label>
-          <textarea class="formboks" name="Beskrivelse"
-            placeholder="Beskriv billedet og hvordan du tog det i en sætning eller to..." required></textarea>
-
-          <input type="file" id="imageUpload" accept="image/*">
-
-          <label for="imageUpload">
-            Træk dit billede hertil<br>
-            eller vælg fil
-          </label>
-        </div>
-
-        <div class="checkbox">
-          <input type="checkbox">
-
-          <label>
-            Jeg har læst og accepterer
-            <a href="#" id="vilkaarLink">vilkårene og betingelserne</a>
-          </label>
-        </div>
-
-        <button class="submit" type="submit">Indsend min instant</button>
-      </form>
-
-    </section>
-
-    <div id="vilkaarPopup">
-
-      <div class="popup">
-
-        <button id="lukPopup">×</button>
-
-        <h2>Vilkår & betingelser</h2>
-
-        <p>Ved at deltage i konkurrencen accepterer du følgende vilkår og betingelser.</p>
-
-        <h3>Deltagelse:</h3>
-        <p>
-          Konkurrencen er åben for alle fotografer, både amatører og professionelle,
-          der er over 18 år.
-        </p>
-
-        <h3>Instant foto:</h3>
-        <p>
-          Hver indsendelse skal være et analogt instant-foto og ikke en digital
-          montage lavet i et fotoredigeringsprogram.
-        </p>
-
-        <h3>Samtykke:</h3>
-        <p>
-          Det er ikke tilladt at uploade fotografier af personer, der ikke har
-          givet samtykke til offentliggørelsen af billedet.
-        </p>
-
-        <h3>Juridiske aspekter:</h3>
-        <p>
-          Arrangørerne forbeholder sig retten til at diskvalificere enhver deltager,
-          der overtræder disse betingelser.
-        </p>
-
-        <h3>Antal bidrag:</h3>
-        <p>
-          Du kan deltage i konkurrencen med i alt fem bidrag.
-        </p>
-
-        <h3>Brugsrettigheder:</h3>
-        <p>
-          Ved at indsende et eller flere billeder accepterer du, at billedet må
-          bruges til promovering af fotokonkurrencen.
-        </p>
-
-        <h3>Ophavsret:</h3>
-        <p>
-          Du skal være fotografen af de indsendte instant fotos og have
-          rettighederne til at offentliggøre dem.
-        </p>
-
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo/Logo.webp" alt="Instant Ugen logo" />
+        </a>
       </div>
 
-    </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="vindere.html">Vindere & nominerede</a></li>
+          <li><a href="info.html">Information</a></li>
+          <li><a href="formular.html">Deltag</a></li>
+        </ul>
 
+        <button class="burger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </nav>
+    </header>
+    <main>
+      <h1 class="overskift_2">Del dine instant</h1>
 
+      <section id="form-section">
+        <form id="webform">
+          <div class="box-row1">
+            <div>
+              <label for="navn">Dit fulde navn</label>
+              <input
+                class="formboks"
+                type="text"
+                name="Dit fulde navn"
+                placeholder="Dit fulde navn"
+                required
+              />
+            </div>
 
+            <div>
+              <label for="navn">E-mail</label>
+              <input
+                class="formboks"
+                type="text"
+                name="E-mail"
+                placeholder="din@mail.dk"
+                required
+              />
+            </div>
+          </div>
 
-    <div class="billeder">
-      <img class="pic1_left" src="img/formularpic1.webp" alt="">
+          <div class="box-row">
+            <label for="navn">Titel</label>
+            <input
+              class="formboks"
+              type="text"
+              name="Titel"
+              placeholder="Skriv din titel"
+              required
+            />
 
-      <img class="pic2_right" src="img/formularpic2.webp" alt="">
-    </div>
+            <label for="navn">Beskrivelse bag dit billede</label>
+            <textarea
+              class="formboks"
+              name="Beskrivelse"
+              placeholder="Beskriv billedet og hvordan du tog det i en sætning eller to..."
+              required
+            ></textarea>
 
+            <input type="file" id="imageUpload" accept="image/*" />
 
+            <label for="imageUpload">
+              Træk dit billede hertil<br />
+              eller vælg fil
+            </label>
+          </div>
 
+          <div class="checkbox">
+            <input type="checkbox" />
 
+            <label>
+              Jeg har læst og accepterer
+              <a href="#" id="vilkaarLink">vilkårene og betingelserne</a>
+            </label>
+          </div>
 
+          <button class="submit" type="submit">Indsend min instant</button>
+        </form>
+      </section>
 
-  </main>
-  <footer class="footer">
-    <div class="footer-logo">
-      <a href="/">
-        <img src="logo/logo.webp" alt="Instant Ugen logo" />
-      </a>
-    </div>
+      <div id="vilkaarPopup">
+        <div class="popup">
+          <button id="lukPopup">×</button>
 
-    <div class="socialemedia">
-      <a href="#">
-        <img src="logo/instagram_logo2.webp" alt="Instagram" />
-      </a>
+          <h2>Vilkår & betingelser</h2>
 
-      <a href="#">
-        <img src="logo/facebook_icon2.webp" alt="Facebook" />
-      </a>
-    </div>
+          <p>
+            Ved at deltage i konkurrencen accepterer du følgende vilkår og
+            betingelser.
+          </p>
 
-    <div class="kontaktinfo">
-      <h3>KONTAKT:</h3>
-      <p>E-mail: Instantugen@gmail.dk</p>
-    </div>
-  </footer>
-</body>
+          <h3>Deltagelse:</h3>
+          <p>
+            Konkurrencen er åben for alle fotografer, både amatører og
+            professionelle, der er over 18 år.
+          </p>
 
+          <h3>Instant foto:</h3>
+          <p>
+            Hver indsendelse skal være et analogt instant-foto og ikke en
+            digital montage lavet i et fotoredigeringsprogram.
+          </p>
+
+          <h3>Samtykke:</h3>
+          <p>
+            Det er ikke tilladt at uploade fotografier af personer, der ikke har
+            givet samtykke til offentliggørelsen af billedet.
+          </p>
+
+          <h3>Juridiske aspekter:</h3>
+          <p>
+            Arrangørerne forbeholder sig retten til at diskvalificere enhver
+            deltager, der overtræder disse betingelser.
+          </p>
+
+          <h3>Antal bidrag:</h3>
+          <p>Du kan deltage i konkurrencen med i alt fem bidrag.</p>
+
+          <h3>Brugsrettigheder:</h3>
+          <p>
+            Ved at indsende et eller flere billeder accepterer du, at billedet
+            må bruges til promovering af fotokonkurrencen.
+          </p>
+
+          <h3>Ophavsret:</h3>
+          <p>
+            Du skal være fotografen af de indsendte instant fotos og have
+            rettighederne til at offentliggøre dem.
+          </p>
+        </div>
+      </div>
+
+      <div class="billeder">
+        <img class="pic1_left" src="img/formularpic1.webp" alt="" />
+
+        <img class="pic2_right" src="img/formularpic2.webp" alt="" />
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-logo">
+        <a href="index.html">
+          <img src="logo/Logo.webp" alt="Instant Ugen logo" />
+        </a>
+      </div>
+
+      <div class="socialemedia">
+        <a href="#">
+          <img src="logo/instagram_logo2.webp" alt="Instagram" />
+        </a>
+
+        <a href="#">
+          <img src="logo/facebook_icon2.webp" alt="Facebook" />
+        </a>
+      </div>
+
+      <div class="kontaktinfo">
+        <h3>KONTAKT:</h3>
+        <p>E-mail: Instantugen@gmail.dk</p>
+      </div>
+    </footer>
+  </body>
 </html>
