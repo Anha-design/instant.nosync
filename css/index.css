@@ -8,7 +8,7 @@
 
 header {
   z-index: 1000;
-  padding: 5px 20px;
+  padding: px 20px;
 }
 
 header .logo {
@@ -599,8 +599,8 @@ header .logo {
 
   .hero-billede {
     top: 0;
-    left: 0;
-    width: 75%;
+    left: 10%;
+    width: 80%;
   }
 
   .blaa-baggrund {
